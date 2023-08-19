@@ -1,0 +1,33 @@
+form {
+    width: 750px;
+    background-color: rgba(192, 192, 192, 0.3);
+    padding: 20px;
+    font-weight: bold;
+    margin: 25px;
+}
+
+input, textarea{
+    width: 100%;
+    border-radius: 20px;
+}
+ h1{
+    margin: 25px;
+ }
+
+ span{
+    font-style: italic;
+    color: red;
+    font-weight: 400;
+ }
+
+ button{
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: aliceblue;
+ }
+
+ button:disabled{
+    background-color: gray;
+
+ }

@@ -1,0 +1,26 @@
+.styleCities {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid red;
+    background: white;
+    color: black;
+    padding: 10px;
+    font-style: italic;
+}
+
+ul {
+    margin-top: 20px;
+    white-space: nowrap;
+    height: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+a:hover{
+    background: red;
+}

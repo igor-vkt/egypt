@@ -1,0 +1,46 @@
+<h1>Innovative Ideas</h1>
+<form [formGroup]="techIdeasForm">
+    <div>
+        <label for="userName">Name</label> <br>
+        <input type="text" id="userName" formControlName="name"><br>
+        <span *ngIf="name.touched && name.errors?.['required']">name is required</span>
+        <span *ngIf="name.dirty && name.errors?.['minlength']">name must be at least 3 characters</span>
+        <span *ngIf="name.dirty && name.errors?.['prohibited']">cant use it</span>
+    </div>
+    <br>
+
+    <div>
+        <label for="userEmail">Email</label> <br>
+        <input type="email" id="userEmail" formControlName="email">
+        <span *ngIf="email.touched && email.errors?.['required']">email is required</span>
+        <span *ngIf="email.dirty && email.errors?.['required']">email is required</span>
+        <span *ngIf="email.dirty && email.errors?.['email']">this is not valid email</span>
+    </div>
+    <br>
+
+    <div>
+        <label for="userAge">Age</label> <br>
+        <input type="number" id="userAge" formControlName="age">
+    </div>
+    <br>
+
+    <div>
+        <label for="targetCity">Target City</label>
+        <select value="{{city}}" id="targetCity" formControlName="city">
+            <option value="{{city}}" *ngFor="let city of cities">{{city}}</option>
+        </select>
+        <span *ngIf="city.touched && city.errors?.['required']">Please choose a city</span>
+    </div>
+    <br>
+    <div>
+        <label for="brief">Brief about your idea:</label> <br>
+        <textarea rows="4" cols="50" id="brief" formControlName="brief"> </textarea>
+        <span *ngIf="brief.touched && brief.errors?.['required']">Please insert a brief about your project.</span>
+        <span *ngIf="brief.dirty && brief.errors?.['minlength']">Your brief should be more than 19 characters</span>
+        <span *ngIf="brief.dirty && brief.errors?.['prohibited']">Your project description cannot contain the word "nothing."</span>
+    </div>
+    <br>
+    <button type="submit" (click)="onSubmit()" [disabled]="techIdeasForm.invalid">Submit</button>
+</form>
+
+

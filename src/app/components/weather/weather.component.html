@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li class="list-item" *ngFor="let weather of weatherData">
+            <a class="styleCities" [routerLink]="[weather.name, weather.springN, weather.springM, weather.summerN, weather.summerM, weather.winterN, weather.winterM, weather.autumnN, weather.autumnM, weather.visitFrom, weather.visitTo]">
+                {{weather.name}} </a>
+        </li>
+    </ul>
+</div>

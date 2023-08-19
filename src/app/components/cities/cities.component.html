@@ -1,0 +1,5 @@
+<div *ngFor="let city of cities" [ngClass]="{'green-text': !colorIt()}">{{city.name}} 
+    <ul class="touristAttractions">
+        <li>{{ city.touristAttractions }}</li>
+    </ul>
+</div>
